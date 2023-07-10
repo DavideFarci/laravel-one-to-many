@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class TypeController extends Controller
 {
+    private $validations = [
+        'name'         => 'required|string|max:50',
+        'description'  => 'required|string|max:1000',
+    ];
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +19,8 @@ class TypeController extends Controller
      */
     public function index()
     {
-        //
+        $types = Type::all();
+        return view('admin.types.index', compact('types'));
     }
 
     /**
@@ -36,7 +41,15 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate($this->validations);
+
+        $data = $request->all();
+        // Salvare i dati nel database
+        $newType = new Type();
+        $newType->name = $data['name'];
+        $newType->description = $data['description'];
+
+        return redirect()->route('Admin.type.show', ['type' => $newType]);
     }
 
     /**
