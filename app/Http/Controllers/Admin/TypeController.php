@@ -30,7 +30,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('Admin.types.create');
     }
 
     /**
@@ -88,12 +88,11 @@ class TypeController extends Controller
 
         $data = $request->all();
         // Salvare i dati nel database
-        $newType = new Type();
-        $newType->name = $data['name'];
-        $newType->description = $data['description'];
-        $newType->update();
+        $type->name = $data['name'];
+        $type->description = $data['description'];
+        $type->update();
 
-        return redirect()->route('Admin.type.show', ['type' => $newType]);
+        return redirect()->route('Admin.type.show', ['type' => $type]);
     }
 
     /**
