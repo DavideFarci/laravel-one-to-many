@@ -27,8 +27,8 @@
         <tbody>
             @foreach ($types as $type)
                 <tr>
-                    <th scope="row">{{ $type->title }}</th>
-                    <td>{{ $type->author }}</td>
+                    <th scope="row">{{ $type->name }}</th>
+                    <td>{{ $type->description }}</td>
                     <td>
                         <a class="btn btn-primary" href="{{ route('admin.type.show', ['type' => $type->id]) }}">View</a>
                         <a class="btn btn-warning" href="{{ route('admin.type.edit', ['type' => $type->id]) }}">Edit</a>

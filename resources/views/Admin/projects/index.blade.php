@@ -21,6 +21,7 @@
         <thead>
             <tr>
                 <th scope="col">Title</th>
+                <th scope="col">Type</th>
                 <th scope="col">Author</th>
                 <th scope="col">Creation Date</th>
                 <th scope="col">Last Update</th>
@@ -34,6 +35,7 @@
             @foreach ($projects as $project)
                 <tr>
                     <th scope="row">{{ $project->title }}</th>
+                    <td>{{ $project->type_id }}</td>
                     <td>{{ $project->author }}</td>
                     <td>{{ $project->creation_date }}</td>
                     <td>{{ $project->last_update }}</td>
