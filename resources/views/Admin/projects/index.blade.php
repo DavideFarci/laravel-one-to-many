@@ -7,7 +7,7 @@
     <div class="alert alert-danger">
         The project "{{ $project->title }}" has been Deleted
         <form
-            action="{{ route("admin.project.restore", ['project' => $project]) }}"
+            action="{{ route("admin.project.cancel", ['project' => $project]) }}"
                 method="post"
                 class="d-inline-block"
             >
@@ -17,7 +17,7 @@
     </div>
     @endif
 
-    <table class="table table-striped">
+    <table class="table table-striped bg-dark">
         <thead>
             <tr>
                 <th scope="col">Title</th>
@@ -35,7 +35,7 @@
             @foreach ($projects as $project)
                 <tr>
                     <th scope="row">{{ $project->title }}</th>
-                    <td>{{ $project->type_id }}</td>
+                    <td>{{ $project->type->name }}</td>
                     <td>{{ $project->author }}</td>
                     <td>{{ $project->creation_date }}</td>
                     <td>{{ $project->last_update }}</td>
