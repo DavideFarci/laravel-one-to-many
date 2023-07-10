@@ -8,6 +8,9 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Projects
@@ -27,6 +30,12 @@
                         <li><a class="dropdown-item" href="{{ route('admin.type.create') }}">Add</a></li>
                     </ul>
     
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{{ route('admin.project.trashed') }}" role="button" aria-expanded="false">
+                        Bin
+                    </a>
                 </li>
             </ul>
 
