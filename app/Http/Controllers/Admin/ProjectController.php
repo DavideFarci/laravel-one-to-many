@@ -17,6 +17,7 @@ class ProjectController extends Controller
         'description'   => 'nullable|string',
         'languages'     => 'required|string|max:50',
         'link_github'   => 'required|string|max:150',
+        'type_id'       => 'required|integer|exist:types,id',
     ];
 
     /**
@@ -62,6 +63,7 @@ class ProjectController extends Controller
         $newProject->description = $data['description'];
         $newProject->languages = $data['languages'];
         $newProject->link_github = $data['link_github'];
+        $newProject->type_id = $data['type_id'];
         $newProject->save();
 
         // return 'commentare se serve debuggare';
@@ -115,6 +117,7 @@ class ProjectController extends Controller
         $newProject->description = $data['description'];
         $newProject->languages = $data['languages'];
         $newProject->link_github = $data['link_github'];
+        $newProject->type_id = $data['type_id'];
         $newProject->update();
 
         // return 'commentare se serve debuggare';

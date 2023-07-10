@@ -10,6 +10,7 @@ return [
         "description"      => "A clone of Spotify Web",
         "languages"        => "HTML, CSS",
         "link_github"      => "https://github.com/DavideFarci/html-css-spotifyweb.git",
+        "type_id"             => "1",
     ],
     [
         "title"            => "Campominato",
@@ -20,6 +21,7 @@ return [
         "description"      => "A clone of Minefield",
         "languages"        => "HTML, CSS, JS ",
         "link_github"      => "https://github.com/DavideFarci/js-campominato-dom.git",
+        "type_id"             => "1",
     ],
     [
         "title"            => "Social Post",
@@ -30,6 +32,7 @@ return [
         "description"      => "A clone of Facebook",
         "languages"        => "HTML, CSS, JS",
         "link_github"      => "https://github.com/DavideFarci/js-social-posts.git",
+        "type_id"          => "1",
     ],
     [
         "title"            => "BoolzApp",
@@ -40,6 +43,7 @@ return [
         "description"      => "A clone of WhatsApp",
         "languages"        => "HTML, CSS, JS",
         "link_github"      => "https://github.com/DavideFarci/vue-boolzapp.git",
+        "type_id"          => "1",
     ],
     [
         "title"            => "BoolFlix",
@@ -50,6 +54,7 @@ return [
         "description"      => "A clone of Nelflix",
         "languages"        => "HTML, JS, VUE",
         "link_github"      => "https://github.com/DavideFarci/vite-boolflix.git",
+        "type_id"          => "1",
     ],
     [
         "title"            => "Project Html-VueJs",
@@ -60,6 +65,7 @@ return [
         "description"      => "A clone of a Website",
         "languages"        => "HTML, VUE",
         "link_github"      => "https://github.com/DavideFarci/proj-html-vuejs.git",
+        "type_id"          => "1",
     ],
     [
         "title"            => "DC Comics",
@@ -70,6 +76,7 @@ return [
         "description"      => "A clone of a Website of DC Comics",
         "languages"        => "PHP, BLADE",
         "link_github"      => "https://github.com/DavideFarci/laravel-dc-comics.git",
+        "type_id"          => "2",
     ],
     [
         "title"            => "Laravel Boolean",
@@ -80,5 +87,6 @@ return [
         "description"      => "A invoices organizer",
         "languages"        => "PHP, BLADE, JS",
         "link_github"      => "https://github.com/SimoneRicco/laravel-boolean.git",
+        "type_id"          => "3",
     ],
 ];

@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('link_github', 150);
 
             $table->softDeletes();
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 
