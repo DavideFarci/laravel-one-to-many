@@ -18,7 +18,7 @@ class ProjectController extends Controller
         'description'   => 'nullable|string',
         'languages'     => 'required|string|max:50',
         'link_github'   => 'required|string|max:150',
-        'type_id'       => 'required|integer|exist:types,id',
+        'type_id'       => 'required|integer|exists:types,id',
     ];
 
     /**
@@ -71,7 +71,7 @@ class ProjectController extends Controller
         // return 'commentare se serve debuggare';
         // $newComic = Comic::create($data);
 
-        return redirect()->route('Admin.project.show', ['project' => $newProject]);
+        return redirect()->route('admin.project.show', ['project' => $newProject]);
     }
 
     /**
@@ -111,22 +111,18 @@ class ProjectController extends Controller
 
         $data = $request->all();
         // Salvare i dati nel database
-        $newProject = new Project();
-        $newProject->title = $data['title'];
-        $newProject->author = $data['author'];
-        $newProject->creation_date = $data['creation_date'];
-        $newProject->last_update = $data['last_update'];
-        $newProject->collaborators = $data['collaborators'];
-        $newProject->description = $data['description'];
-        $newProject->languages = $data['languages'];
-        $newProject->link_github = $data['link_github'];
-        $newProject->type_id = $data['type_id'];
-        $newProject->update();
+        $project->title = $data['title'];
+        $project->author = $data['author'];
+        $project->creation_date = $data['creation_date'];
+        $project->last_update = $data['last_update'];
+        $project->collaborators = $data['collaborators'];
+        $project->description = $data['description'];
+        $project->languages = $data['languages'];
+        $project->link_github = $data['link_github'];
+        $project->type_id = $data['type_id'];
+        $project->update();
 
-        // return 'commentare se serve debuggare';
-        // $newComic = Comic::create($data);
-
-        return redirect()->route('Admin.project.show', ['project' => $newProject]);
+        return redirect()->route('admin.project.show', ['project' => $project]);
     }
 
     /**
